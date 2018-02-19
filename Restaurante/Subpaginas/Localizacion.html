@@ -8,9 +8,9 @@
     <title>Localizacion</title>
 
     <!-- Styles -->
-    <link rel='stylesheet' href='../assets-paginaDIWEB/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='../assets-paginaDIWEB/css/animate.min.css'>
-    <link rel='stylesheet' href="../assets-paginaDIWEB/css/style-rest.css"/>
+    <link rel='stylesheet' href='../assets-DIWEB-T3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../assets-DIWEB-T3/css/animate.min.css'>
+    <link rel='stylesheet' href="../assets-DIWEB-T3/css/style-rest.css"/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -20,7 +20,7 @@
 
 <!-- Cabecera
 ==============================-->
-<header id="header" class="navbar navbar-inverse navbar-fixed-top" role="banner">
+<header class="navbar navbar-inverse navbar-fixed-top header" role="banner">
     <div class="container">
 
         <!-- Menu collapse -->
@@ -39,7 +39,7 @@
         <!-- Menu navegación -->
         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
             <ul class="nav navbar-nav">
-                <li><a href="../../Restaurante/Subpaginas/Platos.html">Platos</a></li>
+                <li><a href="../../Restaurante/Subpaginas/menus.html">Platos</a></li>
                 <li><a href="../../Restaurante/Subpaginas/Reserva.html">Reserva</a></li>
                 <li><a href="../../Restaurante/Subpaginas/Galeria.html">Galería</a></li>
                 <li><a href="../../Restaurante/Subpaginas/Comentarios.html">Comentarios</a></li>
@@ -49,25 +49,81 @@
     </div>
 </header>
 
-<!-- Push -->
-<div class="push">
+<!-- Contenido
+<div class="fondo-menu">
+    <div class="contaner-fluid mitad-pagina">
+        <div class="container altura-main-contenido">
+            <br><br>
+            <div id="map" class="map mapa">
+                <h2> Mapa de Localización</h2>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50860.99028778004!2d-3.626291312884491!3d37.18094109702924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fce62d32c27d%3A0x9258f79dd3600d72!2sGranada!5e0!3m2!1ses!2ses!4v1513336665051" frameborder="0"  allowfullscreen></iframe>
+                </div>
+            </div>
+            <br><br>
+            <div class="info">
+                <div class="col-md-6 col-sm-12">
+                    <h6>Dirección</h6>
+                    <p>C/ sdfadsfadsfa</p>
+                    <h6>CP</h6>
+                    <p>181818</p>
+                    <h6>Teléfono</h6>
+                    <p>666 999 666</p>
+                    <h6>Horario</h6>
+                    <p>Todos los días de 12 AM- 23 PM</p>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div> -->
+
+<div class="fondo-menu">
+    <div class="contaner-fluid mitad-pagina">
+        <div class="container altura-main-contenido">
+            <br><br>
+            <h2> Mapa de Localización</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div id="map" class="map">
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50860.99028778004!2d-3.626291312884491!3d37.18094109702924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fce62d32c27d%3A0x9258f79dd3600d72!2sGranada!5e0!3m2!1ses!2ses!4v1513336665051" frameborder="0"  allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="info col-md-6 col-sm-6">
+                    <h6>Dirección</h6>
+                    <p>C/ sdfadsfadsfa</p>
+                    <h6>CP</h6>
+                    <p>181818</p>
+                    <h6>Teléfono</h6>
+                    <p>666 999 666</p>
+                    <h6>Horario</h6>
+                    <p>Todos los días de 12 AM- 23 PM</p>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
 </div>
+
 
 <!-- Footer -->
 <footer class="page-footer center-on-small-only">
     <div class="container-fluid">
         <div class="row footer-up">
 
-            <div class="col-md-12 flex">
+            <div class="col-md-12 flex-inline">
 
                 <div class="left-social">
                     <h6 class="mb-0">Echale un ojo a nuestras redes sociales: </h6>
                 </div>
 
-                <div class="social flex">
-                    <a class="fa fa-facebook white-text"></a>
-                    <a class="fa fa-twitter white-text"></a>
-                    <a class="fa fa-instagram white-text"></a>
+                <div class="social flex-inline">
+                    <a class="fa fa-facebook white-text" href=""></a>
+                    <a class="fa fa-twitter white-text" href=""></a>
+                    <a class="fa fa-instagram white-text" href=""></a>
                     <a class="icons-sm pin-ic"><i class="fa fa-pinterest fa-lg white-text"> </i></a>
                 </div>
 
@@ -77,8 +133,8 @@
         <div class="row">
 
             <div class="col-md-6 footer-content">
-                <h5 class="title">Footer Content</h5>
-                <p>Here you can use rows and columns here to organize your footer content.</p>
+                <h5 class="title">Contenido en Footer</h5>
+                <p>Datos de la empresa, contacto, lacalización o <a href="../Restaurante/Subpaginas/Localizacion.html">enlaces a página</a></p>
             </div>
 
         </div>
@@ -93,14 +149,14 @@
 
 <!-- Scripts
 ========================-->
-<script src="../assets-paginaDIWEB/js/jquery.min.js"></script>
-<script src="../assets-paginaDIWEB/js/bootstrap.min.js"></script>
-<script src="../assets-paginaDIWEB/js/waypoints.min.js"></script>
-<script src="../assets-paginaDIWEB/js/jquery.scrollTo.min.js"></script>
-<script src="../assets-paginaDIWEB/js/jquery.localScroll.min.js"></script>
-<script src="../assets-paginaDIWEB/js/jquery.magnific-popup.min.js"></script>
-<script src="../assets-paginaDIWEB/js/script_rest.js"></script>
-
+<script src="../assets-DIWEB-T3/js/jquery.min.js"></script>
+<script src="../assets-DIWEB-T3/js/bootstrap.min.js"></script>
+<script src="../assets-DIWEB-T3/js/waypoints.min.js"></script>
+<script src="../assets-DIWEB-T3/js/jquery.scrollTo.min.js"></script>
+<script src="../assets-DIWEB-T3/js/jquery.localScroll.min.js"></script>
+<script src="../assets-DIWEB-T3/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets-DIWEB-T3/js/script_rest.js"></script>
+<script src="mapa.js"></script>
 
 
 </body>
