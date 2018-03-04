@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica JQueryUI</title>
+
+    <!--
+    Styles
+    =============================================
+     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style-datos.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container-fluid head">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 cont-cont">
+                <h1 class="titulo">Información del cliente</h1>
+            </div>
+            <div class="col-lg-3 col-md-3 cont-cont">
+                <div class="cont-logo">
+                    <a href="jqueryUIPractica.html"><img src="./images/logo-datos.jpg" class="img-logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ! Header -->
+
+<!-- Contenido -->
+<div class="bg-content">
+    <div class="container bg-white sombra">
+
+        <!-- Accordion -->
+        <div id="accordion">
+            <h3>Datos Básicos</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Nombre...">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono" maxlength="9" placeholder="Telefono...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email...">
+                            <small id="emailHelp" class="form-text text-muted">No compartiremos tu email, don't worry.</small>
+                        </div>
+                    </div>
+                </div>
+                <button id="opener1edit" class="btn btn-primary btn-block form1edit" onclick="form1edit()">Cambiar Datos</button>
+                <button id="opener1" class="btn btn-primary btn-block form1" onclick="form1()">Enviar Datos</button>
+                <div id="dialog1" title="¡Hecho!">
+                    <p id="content1"></p>
+                </div>
+            </div>
+        <!-- ! Accordion1 -->
+            <h3>Localización Cliente</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="ui-widget form-group">
+                                <label for="comunidad">Comunidad </label>
+                                <input id="comunidad" class="form-control" placeholder="Comunidad">
+                            </div>
+                        <div class="form-group">
+                            <label for="Municipio">Municipio</label>
+                            <input type="text" class="form-control" id="Municipio" placeholder="Municipio...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="CP">CP</label>
+                            <input type="text" class="form-control" id="CP" maxlength="5" placeholder="Codigo Postal...">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Direccion</label>
+                            <input type="email" class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Direccion...">
+                        </div>
+                    </div>
+                </div>
+                <button id="opener2edit" class="btn btn-primary btn-block form2edit" onclick="form2edit()">Cambiar Datos</button>
+                <button id="opener2" class="btn btn-primary btn-block form2" onclick="form2()">Enviar Datos</button>
+                <div id="dialog2" title="¡Hecho!">
+                    <p id="content2"></p>
+                </div>
+            </div>
+
+            <h3>Tipo de pedido</h3>
+            <div class="container">
+
+                <p>
+                    <label for="spinner">Cantidad a enviar</label>
+                    <input id="spinner" name="value"><br>
+                    <small style="vertical-align: text-bottom; font-size: 9px;">(Bootstrap no muestra los botones del spinner)</small>
+                    <small style="vertical-align: text-bottom; font-size: 9px;"> Cantidades entre 0 y 20</small>
+                </p>
+
+                <br>
+                <p>Plazo de entrega deseado/estimado</p>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xs-6">
+                        <label for="datepicker"></label>
+                        <input type="text" class="form-control" id="datepicker" title="Inicio">
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xs-6">
+                        <label for="datepicker1"></label>
+                        <input type="text" class="form-control" id="datepicker1" title="Fin">
+                    </div>
+                </div>
+                <br>
+                <button id="opener3edit" class="btn btn-primary btn-block form3edit" onclick="form3edit()">Cambiar Datos</button>
+                <button id="opener3" class="btn btn-primary btn-block form3" onclick="form3()">Enviar Datos</button>
+                <div id="dialog3" title="¡Hecho!">
+                    <p id="content3"></p>
+                </div>
+            </div>
+        </div>
+        <!-- ! Accordion -->
+
+        <!-- Progress Bar -->
+        <div class="envuelve-pb">
+            <p class="text-center"><small>Formulario completado: </small><small class="valor-carga"></small></p>
+            <div id="progressbar"></div>
+        </div>
+        <!-- ! Progress Bar -->
+
+        <button id="openerAll" class="btn btn-primary btn-block" onclick="enviaTodo()">Enviar datos</button>
+        <div id="dialogAll" title="¡Hecho!">
+            <p id="contentHolderAll"></p>
+        </div>
+
+    </div>
+
+    <div class="container no-pad">
+        <div class="bg-white sombra">
+            <div class="fin-container">
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ! Contenido -->
+
+<!-- Footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="continer">
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <h3>Nuestras Redes: </h3>
+                    <div class="row">
+                        <div class="logo-red col-lg-3 col-md-3">
+                            <a href="https://www.twitter.com/"><img src="./images/tw.png" alt=""></a>
+                        </div>
+                        <div class="logo-red col-lg-3 col-md-3">
+                            <a href="https://www.facebook.com/"><img src="./images/fb.png" alt=""></a>
+                        </div>
+                        <div class="logo-red col-lg-3 col-md-3">
+                            <a href="https://www.instagram.com/"><img src="./images/inst.png" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7 col-md-7 col-xs-12 text-center">
+                    <p><strong>contacto@muchodato.es</strong></p><br>
+                    <p>© 2018 MuchoDato S.L.L / Tlf: 6546456456 </p><br>
+                    <p>13 Rue del Percebe, BCN</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ! Footer -->
+
+</body>
+
+<!--
+Scripts
+=========================================
+ -->
+
+
+<!-- JQUERY, AJAX... -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> $.noConflict();</script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+
+<!-- API for Autocomplete 
+<script src="./js/widgets/GeoAPI%20Autocomplete.js">-->
+<script type="text/javascript" src="js/widgets/GeoAPI%20Autocomplete.js"></script>
+
+<!-- WIDGETS
+ ======================
+ -->
+<!-- Acordeon -->
+<script src="js/widgets/acordeon.js"></script>
+
+<!-- Progress Bar/Comprobacion de formulario/Dialogs -->
+<script src="js/widgets/ProgressBarCIA.js"></script>
+
+<!-- Datapicker -->
+<script src="js/widgets/datapicker.js"></script>
+
+<!-- Spinner -->
+<script src="js/widgets/spinner.js"></script>
+
+</html>
